@@ -1,0 +1,11 @@
+<form (submit)="agregarAlimento()">
+    <input type="text" name="alimento" [(ngModel)] = "alimento" placeholder="Alimento"/>
+    <button type="submit">Agregar</button>
+</form>
+<br><br>
+<button (click)="limpiarLista()">Limpiar</button>
+<div *ngIf="!limpiar">
+    <span *ngFor="let i of alimentos">
+        <p>{{i}}</p>
+    </span>
+</div>
